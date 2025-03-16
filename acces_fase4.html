@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceés Permés</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        h1 {
+            text-align: center;
+        }
+        h3 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+        .info {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<script>
+    let segundos = 5; // Tiempo en segundos
+    function cuentaRegresiva() {
+        if (segundos > 0) {
+            document.getElementById("contador").textContent = segundos;
+            segundos--;
+            setTimeout(cuentaRegresiva, 1000);
+        } else {
+            window.location.href = "menu.html"; // Cambia esta URL por la de destino
+        }
+    }
+    window.onload = cuentaRegresiva;
+</script>
+<body>
+   
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Correcte!</h1>
+            <div class="info">
+            
+                <p>Obre la carpeta Fase 4 per continuar</p>
+            </div>
+            <p>Seràs redirigit en <span id="contador">5</span> segons. Si no, fes clic <a href="menu.html">aquí</a>.</p>
+    
+       
+    </div>
+</body>
+</html>
