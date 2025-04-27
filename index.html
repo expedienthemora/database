@@ -1,86 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hemora Login</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-            margin: 0px;
-        }
-        .login-container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            width: 350px;
-            
-        }
-        .login-container h2 {
-            text-align: center;
-        }
-        .login-container input {
-            width: 94%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .login-container button {
-            width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .login-container button:hover {
-            background-color: #45a049;
-        }
-        .error {
-            color: red;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Expedient Hemora</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <style>
+    /* Estilos generales */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Avenir, sans-serif;
+      background: url('gif.gif') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Contenedor del formulario */
+    .login-container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      text-align: center;
+      width: 300px;
+    }
+
+    /* Logo */
+    .login-container img.logo {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+
+    /* Campos del formulario */
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    /* Botón */
+    .login-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #921E30;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .login-container button:hover {
+      background-color: #921E30;
+    }
+
+    /* Mensaje de error */
+    .error-message {
+      color: #921E30;
+      margin-top: 15px;
+      display: none;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="login-container">
-        <h2>Iniciar sesión</h2>
-        <form id="loginForm">
-            <input type="text" id="username" placeholder="Usuario" required>
-            <input type="password" id="password" placeholder="Contraseña" required>
-            <button type="button" onclick="checkCredentials()">Iniciar sesión</button>
-        </form>
-        <p class="error" id="error-message"></p>
-    </div>
+<div class="login-container">
+  <img src="logo.png" alt="Logo" class="logo">
+  <form id="loginForm">
+    <input type="text" id="username" placeholder="Usuari" required>
+    <input type="password" id="password" placeholder="Contrasenya" required>
+    <button type="submit">Accés</button>
+    <div class="error-message" id="errorMessage">Usuari o contrasenya incorrectes.</div>
+  </form>
+</div>
 
-    <script>
-        function checkCredentials() {
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
-            var errorMessage = document.getElementById('error-message');
+<script>
+  // Credenciales permitidas
+  const USER = 'NpB_drs.98';
+  const PASS = 'PjCL_12ReleF8d';
 
-            // Credenciales correctas
-            var correctUsername = "NpB_drs.98";
-            var correctPassword = "PjCL_12ReLef8d";
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita que recargue la página
+    
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const errorMessage = document.getElementById('errorMessage');
 
-            if (username === correctUsername && password === correctPassword) {
-                // Redirige a otra página si las credenciales son correctas
-                window.location.href = "menu.html";
-            } else {
-                // Muestra un mensaje de error si las credenciales son incorrectas
-                errorMessage.textContent = "Usuario o contraseña incorrectos.";
-            }
-        }
-    </script>
+    if (username === USER && password === PASS) {
+      // Credenciales correctas: redirigir
+      window.location.href = 'menu.html'; // Cambia esto al nombre de tu página de destino
+    } else {
+      // Credenciales incorrectas: mostrar error
+      errorMessage.style.display = 'block';
+    }
+  });
+</script>
 
 </body>
 </html>
