@@ -1,71 +1,138 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Ottendorf</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 600px;
-        }
-        h1 {
-            text-align: center;
-        }
-        .info {
-            margin-top: 10px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ex. Ottendorf</title>
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <style>
+    /* Estilos generales */
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('back.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Avenir', sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
 
-        h10 {
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
-            font-size: 10px;
-        }
-    </style>
+    /* Encabezado fijo */
+    header {
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      background: transparent;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+    header img {
+      max-height: 100px;
+      width: auto;
+      cursor: pointer;
+    }
+
+    /* Contenedor principal */
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 140px; /* Para evitar que el contenido se oculte detrás del header fijo */
+      text-align: center;
+    }
+
+    /* Caja de biografía */
+    .bio-box {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      max-width: 800px;
+      width: 90%;
+      margin-top: 100px; /* Margen superior añadido para que esté más entrada */
+    }
+
+    /* Título de la biografía */
+    .bio-box h1 {
+      margin-bottom: 20px;
+      font-size: 32px;
+      color: #333;
+    }
+
+    /* Párrafos de la biografía */
+    .bio-box p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    /* Imagen de la biografía */
+    .bio-box img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Ajustes para pantallas pequeñas */
+    @media (max-width: 768px) {
+      .bio-box {
+        padding: 20px;
+      }
+
+      .bio-box h1 {
+        font-size: 28px;
+      }
+
+      .bio-box p {
+        font-size: 16px;
+      }
+
+      .bio-box img {
+        width: 80%;
+        max-width: 250px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Dr. Ottendorf</h1>
-        <div class="info">
-            <h3>Xifratge per Llibre
-            </h3>
-            <p>Consisteix en una sèrie de grups de tres números que fan referència a lletres específiques en un llibre.
-            </p>
-        </div>
-        <div class="info">
-            <h3>Funcionament</h3>
-            <p>Aquest llibre ha de ser conegut pel descodificador, i ser a més de la mateixa edició que el llibre de la persona que escriu el missatge codificat.
-                Dels grups de números, el primer (començant per l'esquerra) correspon a la pàgina del llibre.
-                El segon a la línia i el tercer al grifo* del text.</p>
-            <h10>*Glifo: Forma, disseny o representació gràfica d'un caràcter</h10>
-        </div>
-        <div class="info">
-            <h3>Exemple no pràctic del resultat:</h3>
-            <p>39-6-30</p>
-            <p>53-1-2</p>
-            <p>65-3-7</p>
-            <p>18-12-4</p>
-            <p>162-19-1</p>
-            <p>223-2-14</p>
-            <p>88-22-10</p>
-            <p>183-4-5</p>
-            <p> 9-8-3</p>
-            <p>144-5-9</p>
-          
-        </div>
-    </div>
+
+<header>
+  <a href="menu.html">
+    <img src="logo.png" alt="Logo">
+  </a>
+</header>
+
+<div class="container">
+  <div class="bio-box">
+    <h1>Dr. Ottendorf</h1>
+
+    <h3>Xifratge per Llibre
+    </h3>
+    <p>Consisteix en una sèrie de grups de números que fan referència a lletres específiques en un llibre o publicació impresa. També es pot fer amb cartes escrites a mà.</p>
+
+    <h3>Funcionament</h3>
+            <p>Aquest llibre, o publicació ha de ser conegut pel descodificador, i ser a més de la mateixa edició que el llibre de la persona que escriu el missatge codificat.
+                Dels grups de números, el primer (començant per l'esquerra) correspon a la pàgina de la publicació, el segon, si n'hi ha, a la columna, el tercer a la línia i el quart al carácter alfanumèric del text.</p>
+
+
+                <h3>Exemple no pràctic del procés de xifratge:</h3>
+                <p>39-1-6-30</p>
+                <p>53-1-2</p>
+                <p>65-3-7</p>
+                <p>18-2-12-4</p>
+                <p>162-19-1</p>
+                <p>223-2-14</p>
+                <p>88-1-22-10</p>
+                <p>183-4-5</p>
+                <p> 9-2-8-3</p>
+                <p>144-5-9</p>
+
+</div>
+</div>
+
 </body>
 </html>

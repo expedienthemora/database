@@ -1,137 +1,197 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 60%;
-            max-width: 100%;
-        }
-        h1 {
-            text-align: center;
-        }
-        h3 {
-            text-align: center;
-        }
-        p {
-            text-align: center;
-        }
-        .info {
-            margin-top: 10px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accés Ex. Ottendorf</title>
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <style>
+    /* Estilos generales */
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('back.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Avenir', sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
 
-        .form-container {
-            width: 10px%;
-            padding: 40px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-        .form-container input {
-            width: 310px;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .form-container button {
-            width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .form-container button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    /* Encabezado fijo */
+    header {
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      background: transparent;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+    header img {
+      max-height: 100px;
+      width: auto;
+      cursor: pointer;
+    }
+
+    /* Contenedor principal */
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 140px;
+      text-align: center;
+    }
+
+    /* Caja del formulario */
+    .form-box {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      max-width: 800px;
+      width: 90%;
+    }
+
+    /* Título del formulario */
+    .form-box h1 {
+      margin-bottom: 20px;
+      font-size: 32px;
+      color: #333;
+    }
+
+    /* Preguntas */
+    .form-box label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .form-box input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    /* Mensajes de error */
+    .error {
+      color: #921e30;
+      margin-top: 10px;
+    }
+
+    /* Botón de envío */
+    .form-box button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .form-box button:hover {
+      background-color: #921e30;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
 
-        <div class="content">
-            <h1>Accés Denegat</h1>
-            <p>Necessites introduir els codid per accedir a l'expedient del Dr. Ottendorf:</p>
-            </div>
+<header>
+  <a href="menu.html">
+    <img src="logo.png" alt="Logo">
+  </a>
+</header>
 
-        <div class="form-container">
-            <h3>Control d'acceés</h3>
-            <h5>Ingressa els codis correctes per poder continuar:</h5>
-            <!-- Inputs para los códigos -->
-            
+<div class="container">
+  <div class="form-box">
+    <h1>Contról d'accés</h1>
+    <h3>Necessites introduir els codis per accedir a l'expedient del Dr. Ottendorf: </h3>
+    <form id="quizForm">
+      <div>
+        <label for="question1">1. Edat mínima per donar sang</label>
+        <input type="text" id="question1" name="question1">
+      </div>
 
-                <input type="text" id="codigo1" placeholder="Edat mínima per donar sang">
-                <input type="text" id="codigo2" placeholder="Pes mínim per donar sang">
-                <input type="text" id="codigo3" placeholder="Temps de caducitat dels glòbuls vermells (dies)">
-                <input type="text" id="codigo4" placeholder="Quan dura el procés de la donació? (minuts)">
-                <input type="text" id="codigo5" placeholder="Quantes vegades a l'any pot donar un home?">
-                <input type="text" id="codigo6" placeholder="Quantes vegades a l'any pot donar una dona?">
-                <input type="text" id="codigo7" placeholder="Fins a quantes vides pots salvar amb una donació?">
+      <div>
+        <label for="question2">2. Pes mínim per donar sang</label>
+        <input type="text" id="question2" name="question2">
+      </div>
 
-            <button onclick="verificarCodigos()">Comprovar codis</button>
-        </div>
-    </div>
+      <div>
+        <label for="question3">3. Temps de caducitat dels glòbuls vermells (dies)</label>
+        <input type="text" id="question3" name="question3">
+      </div>
 
-    <script>
-        function verificarCodigos() {
-            // Códigos correctos
-            const codigosCorrectos = {
-                codigo1: "18",
-                codigo2: "50",
-                codigo3: "42",
-                codigo4: "10 i 15",
-                codigo5: "4",
-                codigo6: "3",
-                codigo7: "3",
-            };
+      <div>
+        <label for="question4">4. Quan dura el procés de la donació? (minuts xx/xx)</label>
+        <input type="text" id="question4" name="question4">
+      </div>
 
-            // Obtener los valores de los inputs
-            const codigo1Ingresado = document.getElementById("codigo1").value;
-            const codigo2Ingresado = document.getElementById("codigo2").value;
-            const codigo3Ingresado = document.getElementById("codigo3").value;
-            const codigo4Ingresado = document.getElementById("codigo4").value;
-            const codigo5Ingresado = document.getElementById("codigo5").value;
-            const codigo6Ingresado = document.getElementById("codigo6").value;
-            const codigo7Ingresado = document.getElementById("codigo7").value;
+      <div>
+        <label for="question5">5. Quantes vegades a l'any pot donar un home?</label>
+        <input type="text" id="question5" name="question5">
+      </div>
 
+      <div>
+        <label for="question6">6. Quantes vegades a l'any pot donar una dona?</label>
+        <input type="text" id="question6" name="question6">
+      </div>
 
-            
+      <div>
+        <label for="question7">7. Fins a quantes vides pots salvar amb una donació?</label>
+        <input type="text" id="question7" name="question7">
+      </div>
 
-            // Verificar si todos los códigos son correctos
-            if (codigo1Ingresado === codigosCorrectos.codigo1 && 
-                codigo2Ingresado === codigosCorrectos.codigo2 &&
-                codigo3Ingresado === codigosCorrectos.codigo3 &&
-                codigo4Ingresado === codigosCorrectos.codigo4 &&
-                codigo5Ingresado === codigosCorrectos.codigo5 &&
-                codigo6Ingresado === codigosCorrectos.codigo6 &&
-                codigo7Ingresado === codigosCorrectos.codigo7 ) {
-                // Redirigir a la siguiente página si todos los códigos son correctos
-                window.location.href = "acces_carpeta_ott.html";
-            } else {
-                // Si algún código es incorrecto, recargar la página
-                alert("Incorrecte. Torna-ho a probar.");
-                location.reload();
-            }
-        }
-    </script>
+      <button type="submit">Enviar respuestas</button>
+    </form>
+
+    <div id="error-message" class="error"></div>
+  </div>
+</div>
+
+<script>
+  // Respuestas correctas
+  const correctAnswers = {
+    question1: '18',
+    question2: '50',
+    question3: '42',
+    question4: '10/15',
+    question5: '4',
+    question6: '3',
+    question7: '3'
+  };
+
+  document.getElementById('quizForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evitar el envío del formulario
+
+    let errorMessage = '';
+    let allCorrect = true;
+
+    // Verificar cada respuesta
+    for (let question in correctAnswers) {
+      const userAnswer = document.getElementById(question).value.trim();
+      if (userAnswer.toLowerCase() !== correctAnswers[question].toLowerCase()) {
+        allCorrect = false;
+        errorMessage += `La respuesta a la pregunta ${question.replace('question', '')} es incorrecta.<br>`;
+      }
+    }
+
+    if (allCorrect) {
+      // Si todas las respuestas son correctas, redirigir a otra página
+      window.location.href = 'acces_carpeta_ott.html'; // Cambia 'pagina_siguiente.html' por el nombre de la siguiente página
+    } else {
+      // Mostrar mensaje de error
+      document.getElementById('error-message').innerHTML = errorMessage;
+    }
+  });
+</script>
 
 </body>
 </html>

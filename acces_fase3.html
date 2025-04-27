@@ -1,70 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acceés Permés</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 600px;
-        }
-        h1 {
-            text-align: center;
-        }
-        h3 {
-            text-align: center;
-        }
-        p {
-            text-align: center;
-        }
-        .info {
-            margin-top: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acces Permés</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <style>
+    /* Estilos generales */
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: Avenir, sans-serif;
+      background: url('back.jpg') no-repeat center center fixed; /* Puedes cambiar 'fondo.jpg' por tu fondo */
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    
+    header {
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      background: transparent;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+/* Estilo del logo */
+header img {
+  height: 100px; /* Aumentamos el tamaño del logo */
+  cursor: pointer;: pointer;
+}
+
+   /* Contenedor del mensaje */
+.message-container {
+  margin-top: 150px; /* Para que no tape el logo */
+  max-width: 800px;
+  padding: 40px;
+  background-color: white; /* Fondo blanco de la pastilla */
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para efecto flotante */
+  color: #333; /* Color del texto dentro de la pastilla */
+}
+
+/* Títulos dentro del mensaje */
+.message-container h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+/* Texto dentro del mensaje */
+.message-container p {
+  font-size: 24px;
+  line-height: 1.5;e-height: 1.5;
+    }
+
+  </style>
 </head>
 
 <script>
-    let segundos = 5; // Tiempo en segundos
-    function cuentaRegresiva() {
-        if (segundos > 0) {
-            document.getElementById("contador").textContent = segundos;
-            segundos--;
-            setTimeout(cuentaRegresiva, 1000);
-        } else {
-            window.location.href = "menu.html"; // Cambia esta URL por la de destino
-        }
-    }
-    window.onload = cuentaRegresiva;
+  let segundos = 5; // Tiempo en segundos
+  function cuentaRegresiva() {
+      if (segundos > 0) {
+          document.getElementById("contador").textContent = segundos;
+          segundos--;
+          setTimeout(cuentaRegresiva, 1000);
+      } else {
+          window.location.href = "menu.html"; // Cambia esta URL por la de destino
+      }
+  }
+  window.onload = cuentaRegresiva;
 </script>
-<body>
-   
 
-    </head>
-    <body>
-        <div class="container">
-            <h1>Correcte!</h1>
-            <div class="info">
-            
-                <p>Obre la carpeta Fase 3 per continuar</p>
-            </div>
-            <p>Seràs redirigit en <span id="contador">5</span> segons. Si no, fes clic <a href="menu.html">aquí</a>.</p>
-    
-       
-    </div>
+<body>
+
+  <!-- Cabecera con logo -->
+  <header>
+    <a href="menu.html">
+      <img src="logo.png" alt="Logo">
+    </a>
+  </header>
+
+  <!-- Contenido principal -->
+  <div class="message-container">
+    <h1>Correcte!</h1>
+    <h3>Obre l'expedient 3. Banc de Sang</h3>
+    <p>Seràs redirigit en <span id="contador">5</span> segons. Si no, fes clic <a href="menu.html">aquí</a>.</p>
+  </div>
+
 </body>
 </html>
