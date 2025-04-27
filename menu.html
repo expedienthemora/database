@@ -1,49 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hemora Database</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        nav {
-            background-color: #333;
-            padding: 30px;
-            text-align: center;
-            
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 15px;
-            font-size: 18px;
-        }
-        nav a:hover {
-            background-color: #575757;
-            padding: 5px 10px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Database</title>
 
-        div {
-            padding: 30px;
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.png" type="image/png">
 
-        }
-    </style>
+  <!-- Estilos -->
+  <style>
+    /* Estilos generales */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Avenir, sans-serif;
+      background: url('back.jpg') no-repeat center center fixed; /* Puedes cambiar 'fondo.jpg' por tu GIF o imagen */
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      background: transparent;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+/* Estilo del logo */
+header img {
+  height: 100px; /* Aumentamos el tamaño del logo */
+  cursor: pointer;
+}
+
+/* Contenedor de botones */
+.button-container {
+  margin-top: 100px; 
+}
+
+
+
+    /* Contenedor de los botones */
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+
+    /* Botones */
+    .button-container a {
+      text-decoration: none;
+      background-color: #333;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-size: 18px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-container a:hover {
+      background-color: #921E30;
+    }
+  </style>
 </head>
+
 <body>
-    <div>
-    <nav>
-        <a href="control_acces.html">Accessos</a>
-        <a href="pacients.html">Pacients</a>
-        <a href="doctors.html">Doctors</a>
-        <a href="proves_mediques.html">Proves mèdiques</a>
-        <a href="final.html">Final</a>
-    </nav>
-    </div>
+
+  <header>
+    <a href="menu.html">
+      <img src="logo.png" alt="Logo">
+    </a>
+  </header>
+
+  <div class="button-container">
+    <a href="control_acces.html">Accéss a Expedients</a>
+    <a href="pacients.html">Pacients</a>
+    <a href="proves_mediques.html">Proves mèdiques</a>
+    <a href="doctors.html">Doctors</a>
+    <a href="final.html">Testimons</a>
+
+  </div>
 
 </body>
 </html>

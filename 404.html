@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Error</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <style>
+    /* Estilos generales */
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: Avenir, sans-serif;
+      background: url('back.jpg') no-repeat center center fixed; /* Puedes cambiar 'fondo.jpg' por tu fondo */
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      background: transparent;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+/* Estilo del logo */
+header img {
+  height: 100px; /* Aumentamos el tamaño del logo */
+  cursor: pointer;: pointer;
+}
+
+   /* Contenedor del mensaje */
+.message-container {
+  margin-top: 150px; /* Para que no tape el logo */
+  max-width: 800px;
+  padding: 40px;
+  background-color: white; /* Fondo blanco de la pastilla */
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para efecto flotante */
+  color: #333; /* Color del texto dentro de la pastilla */
+}
+
+/* Títulos dentro del mensaje */
+.message-container h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+/* Texto dentro del mensaje */
+.message-container p {
+  font-size: 24px;
+  line-height: 1.5;e-height: 1.5;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Cabecera con logo -->
+  <header>
+    <a href="menu.html">
+      <img src="logo.png" alt="Logo">
+    </a>
+  </header>
+
+  <!-- Contenido principal -->
+  <div class="message-container">
+    <h1>Error 404!</h1>
+    <p>The link you followed may be broken, or the page may have been removed. Go back</p>
+  </div>
+
+</body>
+</html>

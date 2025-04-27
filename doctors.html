@@ -1,108 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctors</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            font-size: 18px;
-            margin: 8px 0;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Dcotors</title>
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('back.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Avenir', sans-serif;
+      min-height: 100vh;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      background: transparent;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+
+    /* Logo */
+header img {
+  height: 100px;
+  cursor: pointer;
+}
+
+    .list-container {
+      margin-top: 200px; /* espacio para el logo */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .list-container button {
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #333;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.2s, background-color 0.3s;
+      width: 300px;
+    }
+
+    .list-container button:hover {
+      background-color: #921E30;
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
 
-    <h1>Base de dades: Doctors</h1>
-    <ul>
-        <li><a href="doctor404.html">Dr. Pérez</a></li>
-        <li><a href="doctor404.html">Dra. Martínez</a></li>
-        <li><a href="doctor404.html">Dr. Rodríguez</a></li>
-        <li><a href="doctor404.html">Dra. López</a></li>
-        <li><a href="doctor404.html">Dr. García</a></li>
-        <li><a href="doctor404.html">Dr. González</a></li>
-        <li><a href="doctor404.html">Dra. Fernández</a></li>
-        <li><a href="doctor404.html">Dr. Jiménez</a></li>
-        <li><a href="doctor404.html">Dra. Ruiz</a></li>
-        <li><a href="doctor404.html">Dr. Díaz</a></li>
-        <li><a href="doctor404.html">Dra. Vázquez</a></li>
-        <li><a href="doctor404.html">Dr. Romero</a></li>
-        <li><a href="doctor404.html">Dr. Bertomeu </a></li>
-        <li><a href="doctor404.html">Dr. Miserachs </a></li>
-        <li><a href="doctor404.html">Dra. Guilera</a></li>
-        <li><a href="doctor404.html">Dr. Valdivia </a></li>
-        <li><a href="doctor404.html">Dr. Galán </a></li>
-        <li><a href="doctor404.html">Dr. Rivas </a></li>
-        <li><a href="doctor404.html">Dr. Cuevas</a></li>
-        <li><a href="doctor404.html">Dra. Linero </a></li>
-        <li><a href="doctor404.html">Dr. Crespo</a></li>
-        <li><a href="doctor404.html">Dra. Casanova </a></li>
-        <li><a href="doctor404.html">Dra. Baeza </a></li>
-        <li><a href="doctor404.html">Dr. Ferrer </a></li>
-        <li><a href="doctor404.html">Dr. Robles</a></li>
-        <li><a href="doctor404.html">Dra. Romero</a></li>
-        <li><a href="doctor404.html">Dra. Vidal </a></li>
-        <li><a href="doctor404.html">Dra. Vázquez </a></li>
-        <li><a href="doctor404.html">Dr. Cano </a></li>
-        <li><a href="doctor404.html">Dra. Bernal </a></li>
-        <li><a href="doctor404.html">Dra. Blanch</a></li>
-        <li><a href="doctor404.html">Dra. Velasco </a></li>
+<header>
+  <a href="menu.html">
+    <img src="logo.png" alt="Logo">
+  </a>
+</header>
 
-           <!-- Dr. Ottendorf -->
-           <li><a href="acces_ottendorf.html">Dr. Ottendorf</a></li>
+<div class="list-container">
+  <button onclick="window.location.href='404.html'">Dr. Pérez</button>
+  <button onclick="window.location.href='404.html'">Dra. Martinez</button>
+  <button onclick="window.location.href='404.html'">Dr. Rodríguez</button>
+  <button onclick="window.location.href='404.html'">Dra. López</button>
+  <button onclick="window.location.href='404.html'">Dr. García</button>
+  <button onclick="window.location.href='404.html'">Dr. González</button>
+  <button onclick="window.location.href='404.html'">Dra. Fernández</button>
+  <button onclick="window.location.href='404.html'">Dr. Jiménez</button>
+  <button onclick="window.location.href='404.html'">Dra. Ruiz</button>
+  <button onclick="window.location.href='404.html'">Dr. Díaz</button>
 
-        <li><a href="doctor404.html">Dr. Rosello </a></li>
-        <li><a href="doctor404.html">Dra. Carbonell </a></li>
-        <li><a href="doctor404.html">Dr. Williams </a></li>
-        <li><a href="doctor404.html">Dr. Vila </a></li>
-        <li><a href="doctor404.html">Dra. Müller </a></li>
-        <li><a href="doctor404.html">Dra. Pardo </a></li>
-        <li><a href="doctor404.html">Dra. Collet </a></li>
-        <li><a href="doctor404.html">Dr. Conesa </a></li>
-        <li><a href="doctor404.html">Dr. Regull </a></li>
-        <li><a href="doctor404.html">Dr. Guerrero </a></li>
-        <li><a href="doctor404.html">Dra. Soler </a></li>
-        <li><a href="doctor404.html">Dr. Rey</a></li>
-        <li><a href="doctor404.html">Dra. Badell </a></li>
-        <li><a href="doctor404.html">Dra. Pereira </a></li>
-        <li><a href="doctor404.html">Dr. Sauleda </a></li>
-        <li><a href="doctor404.html">Dra. Roca </a></li>
-        <li><a href="doctor404.html">Dr. Franco </a></li>
-        <li><a href="doctor404.html">Dra. Riera </a></li>
-        <li><a href="doctor404.html">Dra. Torrent </a></li>
-        <li><a href="doctor404.html">Dr. Laliga </a></li>
-        <li><a href="doctor404.html">Dra. Rose</a></li>
-        <li><a href="doctor404.html">Dra. Ruíz </a></li>
-        <li><a href="doctor404.html">Dr. Taylor</a></li>
-        <li><a href="doctor404.html">Dr. Rubiens</a></li>
-        <li><a href="doctor404.html">Dr. Lewis</a></li>
-        <li><a href="doctor404.html">Dra. Apolo</a></li>
-        <li><a href="doctor404.html">Dr. Lucero</a></li>
-        <li><a href="doctor404.html">Dr. Cirera </a></li>
+  <button onclick="window.location.href='404.html'">Dra. Vázquez</button>
+  <button onclick="window.location.href='404.html'">Dr. Romero</button>
+  <button onclick="window.location.href='404.html'">Dr. Bertome</button>
+  <button onclick="window.location.href='404.html'">Dr. Miserachs</button>
+  <button onclick="window.location.href='404.html'">Dra. Guilera</button>
+  <button onclick="window.location.href='404.html'">Dr. Valdivia</button>
+  <button onclick="window.location.href='404.html'">Dr. Galán</button>
+  <button onclick="window.location.href='404.html'">Dr. Rivas</button>
+  <button onclick="window.location.href='404.html'">Dr. Cuevas</button>
+  <button onclick="window.location.href='404.html'">Dra. Linero</button>
+
+  
+  <button onclick="window.location.href='404.html'">Dr. Crespo</button>
+  <button onclick="window.location.href='404.html'">Dra. Casanova</button>
+  <button onclick="window.location.href='404.html'">Dra. Baeza</button>
+  <button onclick="window.location.href='404.html'">Dr. Ferrer</button>
+  <button onclick="window.location.href='404.html'">>Dr. Robles</button>
+  <button onclick="window.location.href='404.html'">Dra. Romero</button>
+  <button onclick="window.location.href='404.html'">Dra. Vidal</button>
+  <button onclick="window.location.href='404.html'">Dra. Vázquez</button>
+  <button onclick="window.location.href='404.html'">Dr. Cano</button>
+  <button onclick="window.location.href='404.html'">Dra. Bernal</button>
+
+  <button onclick="window.location.href='404.html'">Dra. Blanch</button>
+  <button onclick="window.location.href='404.html'">Dra. Velasco</button>
+  <button onclick="window.location.href='404.html'">Dr. Rosello</button>
+  <button onclick="window.location.href='404.html'">Dra. Carbonell</button>
+  <button onclick="window.location.href='404.html'">Dr. Williams</button>
+  <button onclick="window.location.href='404.html'">Dr. Vila</button>
+  <button onclick="window.location.href='404.html'">Dra. Müller</button>
+  <button onclick="window.location.href='404.html'">Dra. Pardo</button>
+  <button onclick="window.location.href='404.html'">Dra. Collet</button>
+  <button onclick="window.location.href='404.html'">Dr. Conesa</button>
+
+  <!-- Dr. Ottendorf -->
+  <button onclick="window.location.href='acces_ottendorf.html'">Dr. Ottendorf</button>
+  <button onclick="window.location.href='404.html'">Dra. Torrent</button>
+  <button onclick="window.location.href='404.html'">Laliga</button>
+  <button onclick="window.location.href='404.html'">Dra. Rose</button>
+  <button onclick="window.location.href='404.html'">Dra. Ruíz</button>
+  <button onclick="window.location.href='404.html'">Dr. Taylor</button>
+  <button onclick="window.location.href='404.html'">Dr. Rubien</button>
+  <button onclick="window.location.href='404.html'">Dr. Lewis</button>
+  <button onclick="window.location.href='404.html'">Dra. Apol</button>
+  <button onclick="window.location.href='404.html'">Dr. Lucero</button>
+
+  <button onclick="window.location.href='404.html'">Dr. Regull</button>
+  <button onclick="window.location.href='404.html'">Dr. Guerrero</button>
+  <button onclick="window.location.href='404.html'">Dra. Soler</button>
+  <button onclick="window.location.href='404.html'">Dr. Rey</button>
+  <button onclick="window.location.href='404.html'">Dra. Badel</button>
+  <button onclick="window.location.href='404.html'">Dra. Pereira</button>
+  <button onclick="window.location.href='404.html'">Dr. Sauleda</button>
+  <button onclick="window.location.href='404.html'">Dra. Roca</button>
+  <button onclick="window.location.href='404.html'">Dr. Franco</button>
+  <button onclick="window.location.href='404.html'">Dra. Riera</button>
 
 
-    </ul>
+</div>
 
 </body>
 </html>

@@ -1,74 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pacients</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            font-size: 18px;
-            margin: 8px 0;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Pacients</title>
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('back.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Avenir', sans-serif;
+      min-height: 100vh;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      background: transparent;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+    header img {
+      max-height: 100px;
+      width: auto;
+      cursor: pointer;
+    }
+
+    .list-container {
+      margin-top: 200px; /* espacio para el logo */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .list-container button {
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #333;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.2s, background-color 0.3s;
+      width: 300px;
+    }
+
+    .list-container button:hover {
+      background-color: #921E30;
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
 
-    <h1>Expedients:</h1>
-    <ul>
-        <!-- Lista de pacientes con enlaces a los archivos PDF -->
-        <li><a href="pacient_01.pdf" target="_blank">2025/A_00_0_1</a></li>
-        <li><a href="pacient_02.pdf" target="_blank">2025/A_00_0_2</a></li>
-        <li><a href="pacient_01.pdf" target="_blank">2025/A_00_0_3</a></li>
-        <li><a href="pacient_02.pdf" target="_blank">2025/A_00_0_4</a></li>
-        <li><a href="pacient_01.pdf" target="_blank">2025/A_00_0_5</a></li>
-        <li><a href="pacient_02.pdf" target="_blank">2025/A_00_0_6</a></li>
-        <li><a href="pacient_01.pdf" target="_blank">2025/A_00_0_7</a></li>
-        <li><a href="pacient_02.pdf" target="_blank">2025/A_00_0_8</a></li>
-        <li><a href="pacient_01.pdf" target="_blank">2025/A_00_0_9</a></li>
-        <li><a href="pacient_02.pdf" target="_blank">2025/A_00_0_10</a></li>
-        <li><a href="pacient_01.pdf" target="_blank">2025/A_00_0_11</a></li>
-        <li><a href="pacient_02.pdf" target="_blank">2025/A_00_0_12</a></li>
-        <li><a href="pacient_01.pdf" target="_blank">2025/A_00_0_13</a></li>
-        <li><a href="pacient_02.pdf" target="_blank">2025/A_00_0_14</a></li>
-        <li><a href="pacient_01.pdf" target="_blank">2025/A_00_0_15</a></li>
-        <li><a href="pacient_02.pdf" target="_blank">2025/A_00_0_16</a></li>
-        <li><a href="pacient_01.pdf" target="_blank">2025/A_00_0_17</a></li>
-        <li><a href="pacient_02.pdf" target="_blank">2025/A_00_0_18</a></li>
-        <li><a href="pacient_01.pdf" target="_blank">2025/A_00_0_19</a></li>
-        <li><a href="pacient_02.pdf" target="_blank">2025/A_00_0_20</a></li>
-        <li><a href="pacient_01.pdf" target="_blank">2025/A_00_0_21</a></li>
-        <li><a href="pacient_02.pdf" target="_blank">2025/A_00_0_22</a></li>
-        <li><a href="pacient_01.pdf" target="_blank">2025/A_00_0_23</a></li>
-        <li><a href="pacient_02.pdf" target="_blank">2025/A_00_0_24</a></li>
-        <li><a href="pacient_01.pdf" target="_blank">2025/A_00_0_25</a></li>
-        <li><a href="pacient_02.pdf" target="_blank">2025/A_00_0_26</a></li>
-        <li><a href="pacient_01.pdf" target="_blank">2025/A_00_0_27</a></li>
-        <li><a href="pacient_02.pdf" target="_blank">2025/A_00_0_28</a></li>
-        <li><a href="pacient_01.pdf" target="_blank">2025/A_00_0_29</a></li>
-        <li><a href="pacient_02.pdf" target="_blank">2025/A_00_0_30</a></li>
-    
-    </ul>
+<header>
+  <a href="menu.html">
+    <img src="logo.png" alt="Logo">
+  </a>
+</header>
+
+<div class="list-container">
+  <button onclick="window.open('pacients/Ex_1.pdf', '_blank')">AXQ01TG9</button>
+  <button onclick="window.open('pacients/Ex_2.pdf', '_blank')">ZMB02KYL</button>
+  <button onclick="window.open('pacients/Ex_3.pdf', '_blank')">HJC03P84</button>
+  <button onclick="window.open('pacients/Ex_4.pdf', '_blank')">TNL04RMX</button>
+  <button onclick="window.open('pacients/Ex_5.pdf', '_blank')">EWR05B3C</button>
+  <button onclick="window.open('pacients/Ex_6.pdf', '_blank')">KDV06Z78</button>
+  <button onclick="window.open('pacients/Ex_7.pdf', '_blank')">FYP07X2V</button>
+  <button onclick="window.open('pacients/Ex_.8pdf', '_blank')">BMG08AQR</button>
+  <button onclick="window.open('pacients/Ex_9.pdf', '_blank')">QZX09W6D</button>
+  <button onclick="window.open('pacients/Ex_10.pdf', '_blank')">LVN10TV1</button>
+  <button onclick="window.open('pacients/Ex_11.pdf', '_blank')">GHE11M0X</button>
+  <button onclick="window.open('pacients/Ex_12.pdf', '_blank')">CDJ12N92</button>
+  <button onclick="window.open('pacients/Ex_13.pdf', '_blank')">URT13ZD5</button>
+  <button onclick="window.open('pacients/Ex_14.pdf', '_blank')">MPA14LTZ</button>
+  <button onclick="window.open('pacients/Ex_15.pdf', '_blank')">WQI15JY3</button>
+  <button onclick="window.open('pacients/Ex_16.pdf', '_blank')">NXO16CF8</button>
+  <button onclick="window.open('pacients/Ex_17.pdf', '_blank')">VEB17UHK</button>
+  <button onclick="window.open('pacients/Ex_18.pdf', '_blank')">SZA18E41</button>
+  <button onclick="window.open('pacients/Ex_19.pdf', '_blank')">DLY19FTS</button>
+  <button onclick="window.open('pacients/Ex_20.pdf', '_blank')">OGC20QZL</button>
+  <button onclick="window.open('pacients/Ex_21.pdf', '_blank')">IHM21SXB</button>
+  <button onclick="window.open('pacients/Ex_22.pdf', '_blank')">RKP22A36</button>
+  <button onclick="window.open('pacients/Ex_23.pdf', '_blank')">YDJ23XMJ</button>
+  <button onclick="window.open('pacients/Ex_24.pdf', '_blank')">TLG24WZ0</button>
+  <button onclick="window.open('pacients/Ex_25.pdf', '_blank')">JBN25DMP</button>
+  <button onclick="window.open('pacients/Ex_26.pdf', '_blank')">ZVA26R7V</button>
+  <button onclick="window.open('pacients/Ex_27.pdf', '_blank')">ACQ27YPK</button>
+  <button onclick="window.open('pacients/Ex_28.pdf', '_blank')">MXF28P9E</button>
+  <button onclick="window.open('pacients/Ex_28.pdf', '_blank')">EQW29N6U</button>
+  <button onclick="window.open('pacients/Ex_30.pdf', '_blank')">HLS30TKR</button>
+
+ 
+
+</div>
 
 </body>
 </html>
