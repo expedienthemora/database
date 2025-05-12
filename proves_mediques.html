@@ -1,23 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proves</title>
+  <meta charset="UTF-8">
+  <title>Proves mèdiques</title>
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('back.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Avenir', sans-serif;
+      min-height: 100vh;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      background: transparent;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+    header img {
+      max-height: 100px;
+      width: auto;
+      cursor: pointer;
+    }
+
+    .list-container {
+      margin-top: 200px; /* espacio para el logo */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .list-container button {
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #333;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.2s, background-color 0.3s;
+      width: 300px;
+    }
+
+    .list-container button:hover {
+      background-color: #921E30;
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-    <h2>Resultats de proves mèdiques</h2>
-    <ul>
-        <li><a href="doctor404.html" target="_blank">Prova pulmonar</a></li>
-        <li><a href="doctor404.html" target="_blank">Radiografia</a></li>
-        <li><a href="prova.jpg" target="_blank">Hemograma</a></li>
-        <li><a href="doctor404.html" target="_blank">Densiometria</a></li>
-        <li><a href="doctor404.html" target="_blank">Ecografia</a></li>
-        <li><a href="doctor404.html" target="_blank">Electrocardiograma</a></li>
-        <li><a href="doctor404.html" target="_blank">Densiometria</a></li>
+
+<header>
+  <a href="menu.html">
+    <img src="logo.png" alt="Logo">
+  </a>
+</header>
+
+<div class="list-container">
+  <button onclick="window.location.href='404.html'">Prova Respiratòria</button>
+  <button onclick="window.location.href='404.html'">Radiografia</button>
+  <button onclick="window.location.href='prova.jpg'">Hemograma</button>
+  <button onclick="window.location.href='404.html'">Elecrocardiograma</button>
+  <button onclick="window.location.href='404.html'">Densitometra</button>
 
 
+ 
 
-    </ul>
+</div>
+
 </body>
 </html>
